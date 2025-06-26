@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Urbanist', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: white;
+  background-color: #000;
+}
+#header{
+background: linear-gradient(to right, #000000, #333333);
+background-attachment: fixed;
+}
+ul { list-style: none; }
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+nav .fa-solid {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo { font-size: 1.8rem; font-weight: 700; }
+nav ul {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+}
+nav ul li a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e65100;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.rotating {
+  transition: transform 0.2s ease;
+}
+.header-right .sauce.rotating {
+  width: 140px; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+#header, #menu, #review, #subscribe {
+  padding: 15px 60px 50px;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.header-left { width: 50%; }
+.header-right { width: 50%; position: relative; }
+.header-right .dish { width: 100%; }
+.header-left{
+  padding-left: 70px;
+  padding-top: 40px;
+}
+.header-right{
+  padding-right: 30px;
+}
+.header-right .sauce {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 80px;
+}
+.heading-part1, .heading-part2{
+  display: block;
+}
+
+.text-content h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.text-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.text-content p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.text-content button {
+  background-color: #e65100;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+}
+.text-content button:hover{
+  background-color: #000;
+}
+
+/* Menu Section */
+.background{
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#menu{
+  color: black;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.section-sub {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.category-nav {
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+.category-nav span {
+  margin: 0 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.category-nav .active {
+  color: #e65100;
+}
+.menu-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+.menu-link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #e65100;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.menu-item {
+  text-align: center;
+  width: 250px;
+}
+.menu-item img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.menu-item h4 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.menu-item p {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Review Section */
+#review {
+  padding-top: 70px;
+  display: flex;
+  gap: 50px;
+  color: #000;
+  padding-bottom: 100px;
+}
+
+.review-left { flex: 1; }
+.review-left img { width: 100%; }
+.review-right { 
+  padding-left: 60px;
+  padding-right: 30px;
+  flex: 1; 
+  padding-top: 30px;
+}
+.review-right h2 {
+  font-size: 30px;
+  margin-bottom: 4px;
+  margin-top: 60px;
+}
+.review-right p {
+  font-style: normal;
+  font-size: 14px;
+  margin-bottom: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.review-right p::before,
+.review-right p::after {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e65100;
+}
+
+.quote-wrapper {
+  font-size: 16px;
+  line-height: 1.6;
+  display: inline;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.quote-wrapper .fa-solid {
+  vertical-align: middle;
+  line-height: 0; /* prevents icon from expanding line height */
+}
+
+.quote-wrapper .fa-solid{
+  font-size: 30px;
+  color: #e65100;
+}
+.quote-wrapper .fa-solid:hover{
+  color: #000;
+}
+.quote-wrapper .fa-quote-left{
+  margin-right: 5px;
+  padding-bottom: 15px;
+}
+.quote-wrapper .fa-quote-right{
+  margin-left: 5px;
+  padding-top: 10px;
+}
+
+
+.review-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
+.review-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  opacity: 0.7;
+  cursor: pointer;
+  border: 4px solid white;
+}
+.review-icon.active {
+  transform: scale(1.2);
+  /* box-shadow: 0 0 10px #e65100; */
+  opacity: 1;
+}
+
+/* Subscribe Section */
+#subscribe {
+  padding-top: 150px;
+  background: linear-gradient(to right, #000000, #333333);
+  background-attachment: fixed;
+}
+.subscribe-top {
+  text-align: center;
+}
+.subscribe-top h2 {
+  font-size: 1.8rem;
+}
+.subscribe-top p {
+  margin: 10px 0 20px;
+}
+.subscribe-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.subscribe-input input {
+  padding: 10px 20px;
+  border-radius: 50px 0 0 50px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 300px;
+}
+.subscribe-input button {
+  padding: 10px 20px;
+  border-radius: 0 50px 50px 0;
+  background-color: #e65100;
+  border: none;
+  color: white;
+}
+.subscribe-input button:hover{
+  background-color: black;
+}
+.subscribe-bottom {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+  justify-content: center;
+  gap: 90px;
+}
+.column h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.column ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.column ul li:hover{
+  color:#e65100;
+}
+#subscribe .copyright{
+  padding-top: 70px;
+  font-size: 10px;
+  text-align: center;
+}
+#subscribe{
+  padding-bottom: 5px;
+}
+
+/* ------------css for small screens------------- */
+@media only screen and ( max-width: 600px){
+  #header{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom:0;
+  }
+  nav .fa-solid{
+        display: block;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    nav ul{
+        background: #e65100;
+        position:fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 3;
+        transition: right 0.5s;
+        flex-direction: column;
+    }
+    nav ul li{
+        display: block;
+        margin: 5px 20px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+    nav ul li a::after {
+    background: white;
+    }
+.header-right .dish {
+  width: 65vw;        /* Reasonable size for small screens */
+  max-width: 220px;   /* Prevents huge image on larger small screens */
+  z-index: 1;
+  position: relative;
+}
+
+.header-right .sauce {
+  width: 60px !important;        /* Force override */
+  height: auto;   
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  z-index: 2;
+}
+
+nav{
+padding: 0 15px;
+}
+.logo { 
+  font-size: 20px; 
+  font-weight: 700; 
+}
+nav ul li a {
+  font-size: 12px;
+}
+.header-left { 
+  width: 60%; 
+  padding-left: 15px;
+  padding-top: 80px;
+  margin-right: 12px;
+}
+.header-right{
+  margin: 0;
+  padding: 0;
+}
+.text-content h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.text-content h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+  font-weight: 300;
+}
+.text-content p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.text-content button {
+  padding: 8px 18px;
+  font-size: 12px;
+}
+p .heading-part1,p .heading-part2{
+  display: inline;
+}
+#menu{
+  padding-top: 150px;
+  padding-bottom: 70px;
+}
+.category-nav span{
+  margin-right: 5px;
+}
+.section-title {
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+.section-sub {
+  margin-bottom: 70px;
+  font-size: 12px;
+}
+.review-right h2 {
+  font-size: 25px;
+  margin-bottom: 4px;
+  margin-top: 15px;
+}
+.review-icon {
+  width: 25px;
+  height: 25px;
+  border: 3px solid white;
+}
+.review-left{
+  width: 40%;
+  padding-left: 5px;
+  margin-right: 30px;
+}
+.review-icons {
+  gap: 8px;
+  margin-top: 30px;
+}
+.review-left img {
+   width: 200px;
+   height: 200px;
+  }
+.review-right { 
+  padding-left: 0;
+  margin-left: 15px;
+  padding-top: 20px;
+  padding-right: 5px;
+  width: 60%;
+}
+#review{
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 150px;
+  gap: 10px;
+}
+.subscribe-top h2 {
+  font-size: 20px;
+}
+.subscribe-top p {
+  margin: 10px 0 15px;
+  font-size: 12px;
+}
+.subscribe-input {
+  margin-top: 25px;
+}
+.subscribe-input input {
+  width: 200px;
+  font-size: 10px;
+  padding: 7px 10px;
+}
+.subscribe-input button {
+  padding: 7px 10px;
+  font-size: 10px; 
+}
+.subscribe-bottom {
+  padding-top: 80px ;
+  gap: 60px;
+}
+#subscribe .copyright{
+  padding-top: 70px;
+  font-size: 10px;
+  text-align: center;
+}
+#subscribe{
+  padding-bottom: 5px;
+}
+.category-nav span{
+  font-size: 14px;
+gap: 5px;
+}
+}
