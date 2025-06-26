@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DelishDish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e18ad1461a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header id="header">
+    <nav>
+      <div class="logo">DelishDish</div>
+      <ul id="sidemenu">
+        <li><a href="#header">Recipes</a></li>
+        <li><a href="#menu">Food Menu</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+    <div class="header-content">
+      <div class="header-left">
+        <div class="text-content">
+          <h1><span class="heading-part1">Take a taste</span><span class="heading-part2">Come join us.</span></h1>
+          <h3>Life is so endlessly delicious.</h3>
+          <p>Discover the flavors that bring people together. Every <span class="heading-part1">dish has a story worth savoring. Let your cravings find a </span>
+             <span class="heading-part2">home with us.</span></p>
+          <button>Explore Now</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <img src="images/pizza.png" alt="Dish" class="dish rotating">
+        <img src="images/sauce.png" alt="Sauce" class="sauce rotating">
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+   <div class="background">
+  <section id="menu" >
+    <h2 class="section-title">What's on our Plate</h2>
+    <p class="section-sub">Please serve yourself without any hesitance.</p>
+    <div class="category-nav">
+      <span data-category="appetizers" class="menu-link active">Appetizers</span>
+      <span data-category="main" class="menu-link">Main Course</span>
+      <span data-category="dessert" class="menu-link">Dessert</span>
+    </div>
+    <div class="menu-grid" id="menu-grid">
+      <!-- JS Populated -->
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section id="review" >
+    <div class="review-left">
+      <img src="images/bbq.png" alt="BBQ" class="dish rotating">
+    </div>
+    <div class="review-right">
+      <h2>Let's see what others say</h2>
+      <p>feedback that matters</p>
+      <p class="quote-wrapper">
+       <i class="fa-solid fa-quote-left"></i>
+       <span id="review-text"></span>
+       <i class="fa-solid fa-quote-right"></i>
+      </p>
+
+     
+      <div class="review-icons">
+        <img src="images/profile-1.jpg" alt="Profile 1" class="review-icon active" data-index="0">
+        <img src="images/profile-2.jpg" alt="Profile 2" class="review-icon" data-index="1">
+        <img src="images/profile-3.jpg" alt="Profile 3" class="review-icon" data-index="2">
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- Subscribe Section -->
+  <section id="subscribe">
+    <div class="subscribe-top">
+      <h2>Easy recipes will be delivered to your inbox.</h2>
+      <p>Get weekly updates on the newest recipes in our mailbox!</p>
+      <div class="subscribe-input">
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="subscribe-bottom">
+      <div class="column">
+        <h4>Get Cooking</h4>
+        <ul>
+          <li>Recipe Gallery</li>
+          <li>Ingredients Guide</li>
+          <li>Weekly Meal Plans</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Information</h4>
+        <ul>
+          <li>About</li>
+          <li>Privacy Policy</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Follow us</h4>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Pinterest</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Raween Aamir. All rights reserved.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
